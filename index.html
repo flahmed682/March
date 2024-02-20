@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Calendar Scheduler</h1>
+        <form class="form" method="POST" action="generate_schedule.php">
+            <div class="form-group">
+                <label for="person_names">Names of the persons (separated by commas):</label><br>
+                <input type="text" name="person_names" id="person_names" required>
+            </div>
+            <div class="form-group">
+                <label>Select preferred days:</label><br>
+                <label class="radio-label"><input type="radio" name="selected_days" value="all_days" checked>All days of
+                    the month</label><br>
+                <label class="radio-label"><input type="radio" name="selected_days" value="weekend_days">Saturday,
+                    Sunday, Monday</label><br>
+                <label class="radio-label"><input type="radio" name="selected_days" value="weekday_days">Tuesday,
+                    Wednesday, Thursday</label>
+            </div>
+            <button type="submit" class="submit-btn">Generate Schedule</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -10,24 +10,63 @@
 
 <body>
     <div class="container">
-        <h1 class="heading">Calendar Scheduler</h1>
-        <form class="form" method="POST" action="generate_schedule.php">
-            <div class="form-group">
-                <label for="person_names">Names of the persons (separated by commas):</label><br>
-                <input type="text" name="person_names" id="person_names" required>
+        <h1>Calendar Scheduler</h1>
+        <form method="POST" action="generate_schedule.php">
+            <div class="person-group">
+                <h2>Person 1</h2>
+                <div class="form-group">
+                    <label for="person_names1">Names of the persons (separated by commas):</label><br>
+                    <textarea name="person_names1" id="person_names1" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Select preferred days:</label><br>
+                    <label><input type="radio" name="selected_days1" value="all_days" checked>All days of the
+                        month</label><br>
+                    <label><input type="radio" name="selected_days1" value="weekend_days">Saturday, Sunday,
+                        Monday</label><br>
+                    <label><input type="radio" name="selected_days1" value="weekday_days">Tuesday, Wednesday,
+                        Thursday</label><br>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Select preferred days:</label><br>
-                <label class="radio-label"><input type="radio" name="selected_days" value="all_days" checked>All days of
-                    the month</label><br>
-                <label class="radio-label"><input type="radio" name="selected_days" value="weekend_days">Saturday,
-                    Sunday, Monday</label><br>
-                <label class="radio-label"><input type="radio" name="selected_days" value="weekday_days">Tuesday,
-                    Wednesday, Thursday</label>
+
+            <div class="person-group">
+                <h2>Person 2</h2>
+                <div class="form-group">
+                    <label for="person_names2">Names of the persons (separated by commas):</label><br>
+                    <textarea name="person_names2" id="person_names2" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Select preferred days:</label><br>
+                    <label><input type="radio" name="selected_days2" value="all_days" checked>All days of the
+                        month</label><br>
+                    <label><input type="radio" name="selected_days2" value="weekend_days">Saturday, Sunday,
+                        Monday</label><br>
+                    <label><input type="radio" name="selected_days2" value="weekday_days">Tuesday, Wednesday,
+                        Thursday</label><br>
+                </div>
             </div>
-            <button type="submit" class="submit-btn">Generate Schedule</button>
+
+            <div class="person-group">
+                <h2>Person 3</h2>
+                <div class="form-group">
+                    <label for="person_names3">Names of the persons (separated by commas):</label><br>
+                    <textarea name="person_names3" id="person_names3" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Select preferred days:</label><br>
+                    <label><input type="radio" name="selected_days3" value="all_days" checked>All days of the
+                        month</label><br>
+                    <label><input type="radio" name="selected_days3" value="weekend_days">Saturday, Sunday,
+                        Monday</label><br>
+                    <label><input type="radio" name="selected_days3" value="weekday_days">Tuesday, Wednesday,
+                        Thursday</label><br>
+                </div>
+            </div>
+
+            <input type="submit" value="Generate Schedule">
         </form>
     </div>
 </body>
 
 </html>
+

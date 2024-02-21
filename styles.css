@@ -4,81 +4,74 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.heading {
+.title {
     text-align: center;
     color: #333;
-    text-transform: uppercase;
-}
-
-.form {
-    margin-top: 30px;
-}
-
-.form-group {
     margin-bottom: 20px;
+    font-size: 24px;
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: slideInDown 1s forwards ease-in-out;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    color: #555;
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-#person_names {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease-in-out;
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
 }
 
-#person_names:focus {
-    outline: none;
-    border-color: #007bff;
-}
-
-.radio-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.radio-label input[type="radio"] {
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.submit-btn {
-    display: block;
+table {
     width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    text-align: center;
+    border: 1px solid #ccc;
 }
 
-.submit-btn:hover {
-    background-color: #0056b3;
+th {
+    background-color: #f0f0f0;
 }
 
-.submit-btn:active {
-    transform: translateY(1px);
+td {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
 }
+
+td.L {
+    background-color: #a5d6a7;
+    /* Light green for scheduled days */
+}
+
+td:hover {
+    background-color: #f5f5f5;
+    /* Light gray on hover */
+}
+
+

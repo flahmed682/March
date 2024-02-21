@@ -33,18 +33,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $calendarHTML = "<div class='table-container'><table>";
 
 // First row: Dates of the month
-$calendarHTML .= "<tr><th>Person</th>";
+$calendarHTML .= "<tr><th style='background-color: #007bff; color: #fff; padding: 10px;'>Person</th>";
 for ($day = 1; $day <= $numDays; $day++) {
-    $calendarHTML .= "<th>$day</th>";
+    $calendarHTML .= "<th style='background-color: #007bff; color: #fff; padding: 10px;'>$day</th>";
 }
 $calendarHTML .= "</tr>";
 
 // Second row: Days of the week
-$calendarHTML .= "<tr><th>Day</th>";
+$calendarHTML .= "<tr><th style='background-color: #007bff; color: #fff; padding: 10px;'>Day</th>";
 for ($day = 1; $day <= $numDays; $day++) {
     $timestamp = strtotime("$nextYear-$nextMonth-$day");
     $dayName = date('D', $timestamp);
-    $calendarHTML .= "<td>$dayName</td>";
+    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>$dayName</td>";
 }
 $calendarHTML .= "</tr>";
 
@@ -56,7 +56,7 @@ $weekdayDays = [2, 3, 4]; // Tuesday, Wednesday, Thursday (ISO-8601 numeric repr
 foreach ($personNames1 as $personName) {
     $calendarHTML .= "<tr>";
     // First column: Person's name
-    $calendarHTML .= "<td>$personName</td>";
+    $calendarHTML .= "<td style='background-color: #007bff; color: #fff; padding: 10px;'>$personName</td>";
 
     // Loop through each day of the month to generate the schedule
     for ($day = 1; $day <= $numDays; $day++) {
@@ -67,23 +67,23 @@ foreach ($personNames1 as $personName) {
         switch ($selectedDays1) {
             case 'all_days':
                 if ($dayOfWeek != 5) { // 5 represents Friday
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>"; // Exclude 'L' for Friday
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>"; // Exclude 'L' for Friday
                 }
                 break;
             case 'weekend_days':
                 if (in_array($dayOfWeek, $weekendDays)) {
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>";
                 }
                 break;
             case 'weekday_days':
                 if (in_array($dayOfWeek, $weekdayDays)) {
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>";
                 }
                 break;
         }
@@ -95,7 +95,7 @@ foreach ($personNames1 as $personName) {
 foreach ($personNames2 as $personName) {
     $calendarHTML .= "<tr>";
     // First column: Person's name
-    $calendarHTML .= "<td>$personName</td>";
+    $calendarHTML .= "<td style='background-color: #007bff; color: #fff; padding: 10px;'>$personName</td>";
 
     // Loop through each day of the month to generate the schedule
     for ($day = 1; $day <= $numDays; $day++) {
@@ -106,23 +106,23 @@ foreach ($personNames2 as $personName) {
         switch ($selectedDays2) {
             case 'all_days':
                 if ($dayOfWeek != 5) { // 5 represents Friday
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>"; // Exclude 'L' for Friday
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>"; // Exclude 'L' for Friday
                 }
                 break;
             case 'weekend_days':
                 if (in_array($dayOfWeek, $weekendDays)) {
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>";
                 }
                 break;
             case 'weekday_days':
                 if (in_array($dayOfWeek, $weekdayDays)) {
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>";
                 }
                 break;
         }
@@ -134,7 +134,7 @@ foreach ($personNames2 as $personName) {
 foreach ($personNames3 as $personName) {
     $calendarHTML .= "<tr>";
     // First column: Person's name
-    $calendarHTML .= "<td>$personName</td>";
+    $calendarHTML .= "<td style='background-color: #007bff; color: #fff; padding: 10px;'>$personName</td>";
 
     // Loop through each day of the month to generate the schedule
     for ($day = 1; $day <= $numDays; $day++) {
@@ -145,23 +145,23 @@ foreach ($personNames3 as $personName) {
         switch ($selectedDays3) {
             case 'all_days':
                 if ($dayOfWeek != 5) { // 5 represents Friday
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>"; // Exclude 'L' for Friday
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>"; // Exclude 'L' for Friday
                 }
                 break;
             case 'weekend_days':
                 if (in_array($dayOfWeek, $weekendDays)) {
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>";
                 }
                 break;
             case 'weekday_days':
                 if (in_array($dayOfWeek, $weekdayDays)) {
-                    $calendarHTML .= "<td class='L'>L</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>L</td>";
                 } else {
-                    $calendarHTML .= "<td>-</td>";
+                    $calendarHTML .= "<td style='background-color: #f0f0f0; padding: 10px;'>-</td>";
                 }
                 break;
         }
@@ -174,18 +174,14 @@ $calendarHTML .= "</table></div>";
 // Create MPDF object
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']); // Landscape orientation
 
-// Include CSS styles
-$stylesheet = file_get_contents('styles.css');
-$mpdf->WriteHTML($stylesheet, \Mpdf\HTMLParserMode::HEADER_CSS);
-
 // Add title
 $title = "Calendar Schedule - " . date('F Y') . " - Group A"; // Month and Group
 $mpdf->SetTitle($title);
 
 // Write HTML content to PDF
-$mpdf->WriteHTML("<h1>$title</h1>");
+$mpdf->WriteHTML("<h1 style='text-align: center;'>$title</h1>");
 $mpdf->WriteHTML($calendarHTML);
 
 // Output PDF
-$mpdf->Output('calendar_schedule.pdf', 'D');
+$mpdf->Output('calendar_schedule.pdf', 'I');
 ?>

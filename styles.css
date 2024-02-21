@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +7,7 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,9 +19,53 @@ body {
     color: #333;
     margin-bottom: 20px;
     font-size: 24px;
-    transform: translateY(-20px);
-    opacity: 0;
     animation: slideInDown 1s forwards ease-in-out;
+}
+
+.person-group {
+    margin-bottom: 30px;
+}
+
+.person-group h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 @keyframes slideInDown {
@@ -37,41 +79,3 @@ body {
         opacity: 1;
     }
 }
-
-.table-container {
-    overflow-x: auto;
-    margin-top: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #f0f0f0;
-}
-
-td {
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-td.L {
-    background-color: #a5d6a7;
-    /* Light green for scheduled days */
-}
-
-td:hover {
-    background-color: #f5f5f5;
-    /* Light gray on hover */
-}
-
-
